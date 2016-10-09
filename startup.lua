@@ -8,9 +8,12 @@ monitor.setTextScale(5)
 
 while true do
   monitor.clear()
-  monitor.setCursorPos(1,1)
   
+  monitor.setCursorPos(1,1)
   monitor.write( reactor.isActive() )
+  
+  monitor.setCursorPos(1,2)
+  monitor.write( reactor.getEnergyStored() )
   
   if reactor.getEnergyStored() <= low then
     reactor.setActive(true)
