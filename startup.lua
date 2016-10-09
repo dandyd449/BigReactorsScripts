@@ -12,7 +12,7 @@ local function updateScreen()
     monitor.clear()
 
     monitor.setCursorPos(1,1)
-    monitor.write( "Active: " .. reactor.getActive() )
+    monitor.write( "Active: " .. tostring(reactor.getActive()) )
 
     monitor.setCursorPos(1,2)
     monitor.write("Reactor Energy: " .. reactor.getEnergyStored() )
