@@ -16,10 +16,10 @@ local function updateScreen()
     monitor.write( reactor.getEnergyStored() )
 
     monitor.setCursorPos(1,4)
-    monitor.write( bank.getMaxEnergyStored() )
+    monitor.write( bank.getEnergyStored() )
 
     monitor.setCursorPos(1,5)
-    monitor.write( bank.getEnergyStored() )
+    monitor.write( bank.getMaxEnergyStored() )
 end
 
 local function main()
