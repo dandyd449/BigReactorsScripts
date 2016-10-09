@@ -10,7 +10,7 @@ local function updateScreen()
     monitor.clear()
 
     monitor.setCursorPos(1,1)
-    monitor.write( reactor.isActive() )
+    monitor.write( reactor.getActive() )
 
     monitor.setCursorPos(1,2)
     monitor.write( reactor.getEnergyStored() )
