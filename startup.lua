@@ -8,20 +8,20 @@ local high = 9000000
 local maxBankEnergy = bank.getMaxEnergyStored()
 
 local function updateScreen()
-    monitor.setTextScale(5)
+    monitor.setTextScale(3)
     monitor.clear()
 
     monitor.setCursorPos(1,1)
-    monitor.write( reactor.getActive() )
+    monitor.write( "Active: " .. reactor.getActive() )
 
     monitor.setCursorPos(1,2)
-    monitor.write( reactor.getEnergyStored() )
+    monitor.write("Reactor Energy: " .. reactor.getEnergyStored() )
 
     monitor.setCursorPos(1,4)
-    monitor.write( bank.getEnergyStored() )
+    monitor.write("Bank Energy: " .. bank.getEnergyStored() )
 
     monitor.setCursorPos(1,5)
-    monitor.write( maxBankEnergy )
+    monitor.write("Bank Max Energy: " .. maxBankEnergy )
 end
 
 local function main()
