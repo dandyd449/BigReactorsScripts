@@ -5,6 +5,8 @@ local bank = peripheral.wrap("tile_blockcapacitorbank_name_0")
 local low = 1000000
 local high = 9000000
 
+local maxBankEnergy = bank.getMaxEnergyStored()
+
 local function updateScreen()
     monitor.setTextScale(5)
     monitor.clear()
@@ -19,7 +21,7 @@ local function updateScreen()
     monitor.write( bank.getEnergyStored() )
 
     monitor.setCursorPos(1,5)
-    monitor.write( bank.getMaxEnergyStored() )
+    monitor.write( maxBankEnergy )
 end
 
 local function main()
